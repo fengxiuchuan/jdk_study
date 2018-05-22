@@ -9,11 +9,12 @@ public class AliveOtherThreadTest {
         AliveOtherThread run = new AliveOtherThread();
         run.setName("AliveOtherThread");
         Thread thread = new Thread(run);
-        System.out.println("main begin thread isAlive=" + thread.isAlive());
+        System.out.println("main begin thread isAlive=" + thread.isAlive() );
         thread.setName("timer");
         thread.start();
         System.out.println("main end thread isAlive=" + thread.isAlive());
 
         Thread.sleep(3000);
+
     }
 }
